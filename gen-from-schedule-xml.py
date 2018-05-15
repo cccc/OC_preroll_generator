@@ -24,7 +24,7 @@ def generate_talk_info(event_node):
 
     date = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%S%z')
     locale.setlocale(locale.LC_ALL, 'de_DE')
-    formatted_date = date.strftime('%m. %B %Y')
+    formatted_date = date.strftime('%d. %B %Y')
     title = event_node.find('title').text
     persons = event_node.find('persons').findall('person')
     persons_string = ', '.join(p.text for p in persons)
