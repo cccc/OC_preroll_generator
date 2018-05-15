@@ -63,16 +63,20 @@
      id="text3725"><tspan
        id="tspan3727"
        x="961.38678"
-       y="835.1449"
+       y="795.1449"
        style="text-align:center;text-anchor:middle">Open Chaos — $id</tspan><tspan
        x="961.38678"
-       y="925.17743"
+       y="885.17743"
        id="tspan3729"
        style="font-size:70.00000763px;text-align:center;text-anchor:middle">$personnames</tspan><tspan
        x="961.38678"
-       y="1012.6775"
+       y="972.6775"
        id="tspan3731"
-       style="font-size:70.00000763px;text-align:center;text-anchor:middle">$title</tspan></text>
+       style="font-size:70.00000763px;text-align:center;text-anchor:middle">$title</tspan><tspan
+       x="961.38678"
+       y="1042.6775"
+       id="tspan3731"
+       style="font-size:50px;text-align:center;text-anchor:middle">$subtitle</tspan></text>
   <g
      id="g3516"
      style="fill:#ffffff;fill-opacity:1"

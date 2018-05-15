@@ -26,15 +26,18 @@ def generate_talk_info(event_node):
     locale.setlocale(locale.LC_ALL, 'de_DE')
     formatted_date = date.strftime('%d. %B %Y')
     title = event_node.find('title').text
+    subtitle = event_node.find('subtitle')
+    if subtitle is not None:
+        subtitle = subtitle.text
     persons = event_node.find('persons').findall('person')
     persons_string = ', '.join(p.text for p in persons)
 
-    return (id, formatted_date, persons_string, title)
+    return (id, formatted_date, persons_string, title, subtitle)
 
 def run_generator(executable, event_node):
 
-    id, formatted_date, persons_string, title = generate_talk_info(event_node)
-    subprocess.check_call([executable, formatted_date, persons_string, title, id])
+    id, formatted_date, persons_string, title, subtitle = generate_talk_info(event_node)
+    subprocess.check_call([executable, formatted_date, persons_string, title, subtitle, id])
 
 def main():
 

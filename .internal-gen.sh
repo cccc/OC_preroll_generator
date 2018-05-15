@@ -1,14 +1,14 @@
 #!/bin/sh
-if [ $# -ne 4 ]; then
-	echo "Usage: $0 <date> <persons> <title> <eventid>"
+if [ $# -ne 5 ]; then
+	echo "Usage: $0 <date> <persons> <title> <subtitle> <eventid>"
 	exit 1
 fi
 
-OUTSVG="$4.svg"
-OUTPNG="$4.png"
-OUTTS="$4.ts"
+OUTSVG="$5.svg"
+OUTPNG="$5.png"
+OUTTS="$5.ts"
 
-sed -e s/\$id/"$1"/ -e s/\$personnames/"$2"/ -e s/\$title/"$3"/ preroll.svg > "$OUTSVG" \
+sed -e s/\$id/"$1"/ -e s/\$personnames/"$2"/ -e s/\$title/"$3"/ -e s/\$subtitle/"$4"/ preroll.svg > "$OUTSVG" \
 && inkscape -e "$OUTPNG" "$OUTSVG"
 rm -f "$OUTSVG"
 
