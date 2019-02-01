@@ -28,7 +28,7 @@ def generate_talk_info(event_node):
     title = event_node.find('title').text
     subtitle = event_node.find('subtitle')
     if subtitle is not None:
-        subtitle = subtitle.text
+        subtitle = subtitle.text or ''
     persons = event_node.find('persons').findall('person')
     persons_string = ', '.join(p.text for p in persons)
 
